@@ -1,0 +1,310 @@
+/*geral style*/
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+:target {
+    scroll-margin-top: 60px;
+}
+body{
+    margin: 0px;
+    font-family: Helvetica;
+}
+img{
+    border-radius: 8px;
+}
+h1, h2, h3{
+    margin: 0px;
+}
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 24px;
+}
+
+/*menu style*/
+.menu{
+    position: fixed;
+    background-color: #f36e20;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    color: white;
+    z-index: 10;
+}
+.menu-div{
+    display: flex;   
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.menu-div-1, .menu-div-2{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.menu-div-2{
+    justify-content: end;
+}
+/*nav menu*/
+.nav-links{
+    padding: 0px;
+    margin: 10px;
+}
+.nav-menu {
+    display: flex;
+    gap: 2em;
+    font-size: 18px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+.nav-menu li {
+    list-style: none;
+    transition: all .5s ease;
+}
+.nav-menu li:hover{
+    transform: scale(1.2)
+}
+/*nav menu mobile*/
+input[type=checkbox]{
+    display: none;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+@media (max-width: 768px) {
+    .menu-div-1{
+        width: 75%;
+    }
+    .menu-div-2{
+        width: 25%;
+    }
+   .nav-menu {
+        display: none;
+        position: absolute;
+        background-color:white;
+        top: 80px;
+        right: 0;
+        left: 0;
+        padding: 25px;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.1);
+   }
+    .nav-menu li:hover{
+        transform: scale(1.05)
+    }
+    .nav-menu a {
+        color: black;
+    }
+   .nav-menu li + li {
+        margin-top: 20px;
+   }
+   input[type=checkbox]:checked ~ .nav-menu{
+        display: block;
+   }
+   .hamburger {
+        display: block;
+   }
+}
+
+/*seção-1 style*/
+.secao1{
+    height: 100vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: none;
+    background-image:linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.7)),
+        url('Green-Moss-Photo.jpg');
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+}
+.secao1 h1{
+    font-size: 48px;
+}
+.secao1 h2{
+    font-size: 28px;
+}
+.secao1-div{
+    display: flex;  
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.secao1-div-1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: -80px;
+}
+
+
+/*seção-2 style*/
+.secao2{
+    height: auto;
+    width: 100%;
+}
+.secao2-div{
+    display: flex;  
+    flex-wrap: wrap;
+    width: 680px;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 60px 10px;
+}
+.secao2-div-1{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+/*botão*/
+.secao2-botao{
+    background-color: #f36e20;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px 12px 20px;
+    font-size: 16px;
+    transition: all .5s ease;
+}
+.secao2-botao a{
+    text-decoration: none;
+    color: white;
+}
+.secao2-botao:hover{
+    transform: scale(1.1)
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .secao2-div{
+        width: 85%;
+    }
+}
+
+/*seção-3 style*/
+.secao3{
+    height: auto;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+.secao3-div{
+    display: flex;  
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    padding: 60px 10px 60px 10px;
+}
+.secao3-div-1, .secao3-div-2{
+    display: flex;
+    width: calc(50% - 20px);
+    padding: 10px;
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .secao3-div-1, .secao3-div-2{
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+/*seção-4 style*/
+.secao4{
+    height: auto;
+    width: 100%;
+}
+.secao4-div{
+    display: flex;  
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 60px 10px;
+    text-align: center;
+}
+.secao4-div h3{
+    padding: 20px 0px 0px 0px !important;
+}
+.secao4-div img{
+    object-fit: contain;
+}
+.secao4-div-1, .secao4-div-2, .secao4-div-3{
+    display: flex;
+    width: calc(100% / 3 - 60px);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgb(0 0 0 / 10%);
+    border-radius: 15px;
+    background-color: white;
+    transition: all .5s ease;
+    z-index: 0;
+}
+.secao4-div-1:hover, .secao4-div-2:hover, .secao4-div-3:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .secao4-div-1, .secao4-div-2, .secao4-div-3{
+        width: 100%;
+    }
+}
+
+/*rodape style*/
+.rodape{
+    background-color: #f36e20;
+    color: white;
+    height: auto;
+    width: 100%;
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+.rodape-div{
+    display: flex;  
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 40px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 24px;
+    color: white;
+}
+.rodape-direitos{
+    width: calc(100% - 20px);
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+}
